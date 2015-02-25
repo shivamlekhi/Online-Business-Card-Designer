@@ -1,0 +1,128 @@
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css" />
+	<title>MO Card</title>
+	<script src="js/jquery.js"></script>
+	<script src="js/main.js"></script>
+
+	<link href="css/bootflat/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="css/bootflat/css/font-awesome.min.css" rel="stylesheet" media="screen">
+	<link href="css/bootflat/css/bootflat.css" rel="stylesheet" media="screen">
+	<link href="css/bootflat/css/bootflat-extensions.css" rel="stylesheet" media="screen">
+	<link href="css/bootflat/css/bootflat-square.css" rel="stylesheet" media="screen">
+
+	<link rel="icon" type="image/png" href="./Images/Logo.png">
+</head>
+<body>
+<!-- 	<div id="contents">
+		<div class="btn-group">
+			<button type="button" id="OpenLogin" class="btn btn-primary btn-square">
+				Login Facebook
+			</button>
+	
+			<button type="button" id="Logout" class="btn btn-primary btn-square">
+				Logout Facebook
+			</button>
+	
+			<button type="button" id="Check" class="btn btn-primary btn-square">
+				Check Login
+			</button>
+		</div>
+	
+		<img src="" id="Profile" width="100" height="100" style="margin: 20px 10px 20px 0px; float: left;" alt="">
+		<h1 id="name"></h1>
+		
+		<span id="username"></span>
+		
+		<label for="EDU_SELECT">Select Your Education To Show On The Card</label>
+		<select id="EDU_SELECT" class="form-control" >
+		</select>
+		
+		<label for="WORK_SELECT">Select Your Work For The Card</label>
+		<select id="WORK_SELECT" class="form-control">
+		</select>
+	</div>
+-->
+
+
+<div id="contents">
+	<div class="CenterMain">
+		<div id="brand">
+			<img src="./Images/logo.png" alt="MO LOGO" />
+			<span id="Logo_Text">MO CARD : My Own Card</span>
+			<span id="logo_desc">Create Your Own Personalized ID Cards In Seconds</span>
+		</div>
+
+		<div class="divider"></div>
+
+		<div class="slider">
+
+		</div>
+
+		<div class="divider"></div>
+
+		<span id="card_info">Information For The Card</span>
+	
+		<div id="Bottom_Bar">
+			<a class="btn btn-square btn-primary" id="EnterManually" style="background: #f45947; border-color: #f45947; font-family: 'Oswald';padding: 10px 20px 10px 20px;">Enter Manually</a>
+
+			<a class="btn btn-square btn-primary" id="GetFromFB_Button" style="background: #9dbdd1; border-color: #9dbdd1; font-family: 'Oswald';padding: 10px 20px 10px 20px;">Get From Facebook</a>
+		</div>
+	</div>	
+
+	<div class="CenterBack">
+<!-- 		<div class="btn-group">
+		<button type="button" id="OpenLogin" class="btn btn-primary btn-square">
+			Login Facebook
+		</button>
+		
+		<button type="button" id="Logout" class="btn btn-primary btn-square">
+			Logout Facebook
+		</button>
+		
+		<button type="button" id="Check" class="btn btn-primary btn-square">
+			Check Login
+		</button>
+	</div>
+		
+	<img src="" id="Profile" width="100" height="100" style="margin: 20px 10px 20px 0px; float: left;" alt="">
+	<h1 id="name"></h1>
+	
+	<span id="username"></span>
+	
+	<label for="EDU_SELECT">Select Your Education To Show On The Card</label>
+	<select id="EDU_SELECT" class="form-control" >
+	</select>
+	
+	<label for="WORK_SELECT">Select Your Work For The Card</label>
+	<select id="WORK_SELECT" class="form-control">
+	</select>
+	 -->
+	
+		<div class="header">
+			<span id="Heading">Your Details</span>
+			<span id="description">You Can Select Later What Details To Display On The Card</span>
+		</div>
+
+		<form action="editor.html" method="GET">
+		<!-- <label for="name_input">Name</label> -->
+		<input type="text" name="Title" id="name_input" placeholder="Your Name" class="form-control" />
+		<br>
+		<!-- <label for="email_input">Email</label> -->
+		<input type="email" name="email" id="email_input" placeholder="Email" class="form-control" />
+		<br>
+		<!-- <label for="Website_Input">Website (if Any)</label> -->
+		<input type="text" name="Website" id="Website_Input" placeholder="Website" class="form-control" />
+		<!-- <label for="number_input">Number</label> -->
+		<br>
+		<input type="text" name="number" id="number_input" placeholder="Contact Number" class="form-control" />
+		<br>
+			<button type="submit" class="btn btn-square btn-success" style="background: #f45947; border-color: #f45947; font-family: 'Oswald';padding: 10px 20px 10px 20px;">Create My Card !</a>
+		</form>
+	</div>
+</div>
+
+<div id="fb-root"></div>
+
+</body>
+</html>

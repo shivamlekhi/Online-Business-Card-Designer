@@ -1,0 +1,245 @@
+<html>
+<head>
+	<link rel="stylesheet" href="./css/style.css">
+
+	<title>Card Editor</title>
+
+	<link href="css/bootflat/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="css/bootflat/css/font-awesome.min.css" rel="stylesheet" media="screen">
+	<link href="css/bootflat/css/bootflat.css" rel="stylesheet" media="screen">
+	<link href="css/bootflat/css/bootflat-extensions.css" rel="stylesheet" media="screen">
+	<link href="css/bootflat/css/bootflat-square.css" rel="stylesheet" media="screen">
+
+	<link rel="icon" type="image/png" href="./Images/Logo.png">
+
+	<script src="js/jquery.js"></script>
+	<script src="./js/editor.js"></script>
+	<script src="./js/simple-slider.min.js"></script>
+</head>
+<body>
+	<div id="editor">
+		<div id="ElementContextMenu">
+			<a href="#" class="ContextOptions"  id="ContextEditElement">Edit </a>
+			<a href="#" class="ContextOptions" id="ContextResizeElement">Resize </a>
+			<a href="#" class="ContextOptions" id="ContextDeleteElement">Delete </a>
+		</div>
+
+
+		<div id="menubar">
+			<div id="MenuFront">
+				<div class="button" id="ToggleGrid">
+					<img src="./images/editor/grid_icon.png" alt="">
+				</div>
+
+				<div class="button" style="background: #1abc9c" id="ToggleGrid">
+					<span>Clear Selection</span>
+				</div>
+
+				<div class="button" style="background: #1abc9c; float: right;" id="FlipMenuButton">
+					<span>Add Element</span>
+				</div>
+
+				<div class="button" style="background: #1abc9c;" id="FlipCardButton">
+					<span>Rotate Card</span>
+				</div>
+			</div>
+
+			<div id="MenuBack">
+				<span id="MenuBackDesc" style="float: left;">Add An Element</span>
+
+				<select name="Font Size" id="NewElementSelect" style="float: left;" class="BackMenuSelect">
+					<option value="text">Text</option>
+					<option value="image">Image</option>
+					<option value="division">Box</option>
+					<option value="heading">heading</option>
+					<option value="position">Position</option>
+				</select>	
+				<div class="button" style="background: #1abc9c;float: left;" id="FlipCardBackButton">
+					<span>Done</span>
+				</div>
+			</div> 
+		</div>
+
+		<div id="EditOptions">
+
+			<div id="TextEditOptions" style="display:none;">
+				<span id="Optionsheading">Edit Text</span>
+				
+				<div class="Option">
+					<span class="OptionName">Text</span>
+
+					<input type="text" id="EditTextInput" class="EditInput" placeholder=""/>
+				</div>
+
+				<div class="Option">
+					<span class="OptionName">Text Size</span>
+
+					<select name="Font Size" id="FontSizeSelect" class="EditSelect">
+						<option value="10px">10</option>
+						<option value="12px">12</option>
+						<option value="14px">14</option>
+						<option value="16px">16</option>
+						<option value="18px">18</option>
+						<option value="20px">20</option>
+						<option value="22px">22</option>
+						<option value="24px">24</option>
+						<option value="26px">26</option>
+						<option value="28px">28</option>
+						<option value="30px">30</option>
+						<option value="32px">32</option>
+						<option value="34px">34</option>
+						<option value="36px">36</option>
+						<option value="38px">38</option>
+						<option value="40px">40</option>
+						<option value="42px">42</option>
+						<option value="44px">44</option>
+						<option value="46px">46</option>
+						<option value="48px">48</option>
+						<option value="50px">50</option>
+						<option value="52px">52</option>
+						<option value="54px">54</option>
+						<option value="56px">56</option>
+						<option value="58px">58</option>
+						<option value="60px">60</option>
+						<option value="62px">62</option>
+						<option value="64px">64</option>
+						<option value="66px">66</option>
+					</select>			
+				</div>
+
+				<div class="Option">
+					<span class="OptionName">Font</span>
+					<select name="FontFamily" class="EditSelect" id="FontFamilySelect">
+						<option value="Arial">Sans-Serif</option>
+						<option value="Oswald">Oswald</option>
+						<option value="AvantGarde Bk Bt">Avant Garde</option>
+						<option value="League Gothic">League Gothic</option>
+						<option value="Nexa Bold">Nexa Bold</option>
+						<option value="Lemon">Lemon</option>
+					</select>
+				</div>
+
+				<div class="Option">
+					<span class="OptionName">Color</span>
+					<select name="FontColor" id="FontColorSelect" class="EditSelect">
+						<option value="#e74c3c">Red</option>
+						<option value="#e67e22">Orange</option>
+						<option value="#2ecc71">Green</option>
+						<option value="#f1c40f">Yellow</option>
+						<option value="#bdc3c7">Clouds</option>
+						<option value="#000000">Black</option>
+					</select>
+				</div>
+
+			</div>
+			<div id="ImageEditOptions">
+				<span id="Optionsheading">Edit Box</span>
+				<div class="Option">
+					<span class="OptionName">Background</span>
+
+					<input type="text" id="ImageUrlInput" placeholder="Enter Image URL"/>
+				</div>
+			</div>
+		</div>
+
+		<div id="ResizeHandle"></div>
+
+		<div id="CardSpace">
+
+		</div>
+
+		<div class="grid_overlay">
+
+		</div>
+	</div>
+
+<!-- 	<div id="editor_sidebar">
+	<div id="header">
+		<Button type="button" class="btn btn-square btn-primary" style="font-family: 'Oswald'; margin: 10px; width: 90%;">Preview My Card</Button>
+
+		<div class="divider"></div>
+	</div>
+	
+	<div id="elements">
+		<span id="heading">Customize Your Card</span>
+
+		<div class="element_option" style="background: #2ECC71">
+			<div id="element_color">
+				<input type="checkbox" class="element_checkbox" element="Title"/>
+			</div>
+
+			<div id="element_name">
+				<p>Title</p>
+			</div>
+
+			<div id="element_added"></div>
+		</div>
+		
+
+		<div class="element_option" style="background: #3498DB">
+			<div id="element_color">
+				<input type="checkbox" class="element_checkbox" element="number"/>
+			</div>
+
+			<div id="element_name">
+				<p>Number</p>
+			</div>
+
+			<div id="element_added"></div>
+		</div>
+
+		<div class="element_option" style="background: #9B59B6">
+			<div id="element_color">
+				<input type="checkbox" class="element_checkbox" element="email"/>
+			</div>
+
+			<div id="element_name">
+				<p>Email</p>
+			</div>
+
+			<div id="element_added"></div>
+		</div>
+
+		<div class="element_option" style="background: #E74C3C">
+			<div id="element_color">
+				<input type="checkbox" class="element_checkbox" element="logo"/>
+			</div>
+
+			<div id="element_name">
+				<p>Logo</p>
+			</div>
+
+			<div id="element_added"></div>
+		</div>
+
+		<div class="element_option" style="background: #F39C12">
+			<div id="element_color">
+				<input type="checkbox" class="element_checkbox" element="Divider"/>
+			</div>
+
+			<div id="element_name">
+				<p>Divider</p>
+			</div>
+
+			<div id="element_added"></div>
+		</div>
+
+		<div class="element_option" style="background: #F39C12">
+			<div id="element_color">
+				<input type="checkbox" class="element_checkbox" element="Website"/>
+			</div>
+
+			<div id="element_name">
+				<p>Website</p>
+			</div>
+
+			<div id="element_added"></div>
+		</div>	
+	</div> -->
+
+		<div id="footer">
+			<div class="divider"></div>
+		</div>
+	</div>
+</body>
+</html>

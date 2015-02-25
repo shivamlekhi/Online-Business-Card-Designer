@@ -1,0 +1,562 @@
+/* Webfonts Imports */
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+@import url(http://fonts.googleapis.com/css?family=Audiowide);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(http://fonts.googleapis.com/css?family=Lemon);
+/* Webfonts Imports */
+
+body,html {
+	height: 100%;
+	width: 100%;
+
+	padding: 0px; margin: 0px;
+}
+
+* {
+	padding: 0px; margin: 0px;
+}
+
+#contents {
+	height: 100%;
+	width: 100%;
+
+	background: #f0f0f0;
+}
+
+#WORK_SELECT, #EDU_SELECT {
+	margin: 10px 0px 10px 0px;
+	height: 40px;
+	width: 400px;
+}
+
+
+.CenterMain {
+
+	height: 540px;
+	width: 600px;
+	background: #fff;
+
+	border-radius: 3px;
+	
+	box-shadow: 0px 0px 2px 1px #ddd;
+
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	padding: 30px;
+	transition: all 2s ease-in-out;
+
+	z-index: 1;	
+}
+
+.CenterMain > #brand {
+	height: 70px;
+	width: 540px;
+}
+
+.CenterMain > #brand > img {
+	float: left;
+	height: 70px;
+}
+
+.CenterMain > #brand > #Logo_Text {
+	font-family: 'Oswald', sans-serif;
+	display: inline-block;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 20px;
+	color: #282828;
+	vertical-align: middle;
+	margin: 10px;
+	width: 400px;
+}
+
+.CenterMain > #brand > #logo_desc {
+	margin-left: 10px;
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.CenterMain > .divider {
+	margin: 20px 0px 20px 0px;
+	width: 100%;
+	height: 1px;
+	background: #f0f0f0;
+}
+
+.CenterMain > .slider {
+	height: 250px;
+	background: #f0f0f0;
+	margin-bottom: 15px;
+} 
+
+.CenterMain > #card_info {
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin-bottom: 10px;
+	font-size: 18px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.CenterMain > #Bottom_Bar {
+	height: 100px;
+	width: 100%;
+
+	text-align: center;
+}
+
+
+.CenterBack {
+	box-shadow: 0px 0px 2px 1px #ddd;
+
+	height: 540px;
+	width: 600px;
+	background: #fff;
+
+	border-radius: 3px;
+	
+	-webkit-transform: rotateY(180deg);
+	
+	z-index: 0;
+
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+
+	transition: all 2s ease-in-out;
+
+	padding: 20px;
+}
+
+.CenterBack > .header {
+	height: 80px;
+	width: 100%;
+}
+
+.CenterBack > .header > #Heading {
+	font-size: 28px;
+	font-family: 'Oswald', sans-serif;
+	display: block;
+	width: 100%;
+}
+
+.CenterBack > .header > #description {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.CenterBack > input {
+	background: #F8F7F7;
+}
+
+.CenterBack > input:focus {
+	background: #fff;
+}
+
+
+
+/* Code For Editor Strts Here */
+#editor {
+	height: 100%;
+	width: 100%;
+
+	float: left;
+	position: relative;
+	background: #FAFAFA;
+	min-height: 500px;
+	min-width: 960px;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#editor > #menubar {
+	height: 60px;
+	width: 100%;
+}
+
+#editor > #menubar > #MenuFront {
+	z-index: 1;
+	height: 60px;
+	width: 100%;
+	position: relative;
+	
+	border-bottom: 2px solid #f0f0f0;
+	
+	transition: all 0.5s ease-in-out;
+
+	padding: 15px 10px 0px 10px;
+	background: #fff;
+	position: absolute;
+}
+
+#editor > #menubar > #MenuFront > .button, #menubar .button {
+	height: 30px;
+
+	float: left;
+
+	background: #4FF194;
+	
+	margin: 0px 5px 10px 5px;
+
+	transition: box-shadow 0.2s ease;
+	line-height: 30px;
+}
+
+#editor > #menubar > #MenuFront > .button > span, #menubar .button span {
+	font-size: 16px;
+	font-family: "Oswald";
+	color: #fff;
+	display: block;
+	margin: 0px 10px 0px 10px;
+}
+
+#editor > #menubar > #MenuFront > .button:hover, #menubar .button:hover {
+	cursor: hand;
+	
+	background: #5ED893;
+}
+
+#editor > #menubar > #MenuFront .button img {
+	height: 20px; width: 20px;
+	margin: 5px;
+}
+
+#editor > #menubar > #MenuBack {
+	height: 60px;
+	width: 100%;
+	background: #f0f0f0;
+	padding: 15px 15px 10px 15px;
+
+	z-index: : 100;
+	
+	-webkit-transform: rotateX(180deg);
+	transition: all 0.5s ease-in-out;
+}
+
+#editor > #menubar > #MenuBack > select {
+	width: 200px;
+	height: 30px;
+	font-size: 18px;
+	font-family: "Oswald";
+	margin-right: 20px;
+}
+
+#BackMenuSelect {
+	font-size: 32px;
+}
+
+#MenuBackDesc {
+	font-size: 24px;
+	font-family: "League Gothic";
+	margin-right: 20px;
+}
+
+#EditOptions {
+	width: 200px;
+	background: #2e2e22;
+	margin: 50px 0px 0px 50px;
+	_border-radius: 5px;
+	background: #fff;
+	box-shadow: 1px 1px 5px 1px #ddd;
+	padding: 1px;
+	display: block;
+}
+
+#EditOptions #Optionsheading {
+	font-family: "Oswald";
+	display: block;
+	font-size: 18px;
+	margin: 10px;
+	width: 100%;
+}
+
+#EditOptions  .Option {
+	height: 60px;
+	width: 100%;
+	background: #F8F8F8;
+	border-top: 1px solid #ddd;
+	margin: 0px;
+	padding: 0px 0px 0px 5px;
+} 
+
+.selected {
+	border: 2px solid #009048;
+}
+
+#EditOptions .Option  .OptionName {
+	font-size: 14px;
+	color: #aaa;
+	font-family: 'Oswald', cursive;
+	font-weight: none;
+	margin: 5px 0px 5px 0px;
+	width: 100%;
+	display: block;
+	float: left;
+}
+
+#EditOptions .Option  select {
+	width: 95%;
+	font-family: "AvantGarde Bk Bt";
+}
+
+.EditInput {
+	font-family: "AvantGarde Bk Bt";
+}
+
+#editor > #CardSpace {
+	height: 300px;
+	width: 500px;
+	_background: url("../Images/editor/grid.png");
+	
+	position: absolute;
+    top: 30%;
+    left: 30%;
+
+	margin: auto;
+
+	box-shadow: 0px 0px 5px 1px #ddd;
+
+	z-index: 0;
+	_background: url("../Images/editor/grid.png");
+	transition: all 2s ease-in-out;
+}
+
+.element {
+	display: block;
+	color: #2e2e2e;
+	font-size: 22px;
+	height: auto;
+	width: auto;
+	font-family: "Oswald";
+	cursor: move;
+	position: absolute;
+	color: #000;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#logo {
+	border: none;
+}
+
+.element-image {
+	height: 100px;
+	width: 100px;
+
+	/* background: #aaa; */
+	background: #009060;
+}
+
+.element-div {
+	background: #2e2e2e;
+	height: 100px;
+	width: 100px;
+}
+
+#ResizeHandle {
+	height: 10px;
+	width: 10px;
+
+	background: #2e2e2e;
+	position: absolute;
+	z-index: 1000;
+	cursor: nw-resize;
+	display: none;
+}
+
+#ElementContextMenu {
+	width: 150px;
+	display: none;
+	position: absolute;
+	z-index: 100000;
+	background: #f0f0f0;
+	padding: 0px; margin: 10px;
+}
+
+#ElementContextMenu > .ContextOptions {
+	height: 30px;
+	width: 100%;
+	font-size: 14px;
+	line-height: 30px;
+	background: #2e2e2e;
+	margin: 0px; padding: 0px;
+	font-family: 'Roboto', sans-serif;
+	padding-left: 10px;
+	display: block;
+	border-bottom: 1px #666 solid;
+	text-decoration: none;
+	color: #fff;
+}
+
+#ElementContextMenu > .ContextOptions:hover {
+	border-left: 5px #e74c3c solid;
+	transition: all 0.1s ease-in-out;
+	cursor: link;
+}
+
+.grid_overlay {
+	z-index: 1;
+	height: 300px;
+	width: 500px;
+	background: url("../Images/editor/grid.png");
+	
+	position: absolute;
+    top: 30%;
+    left: 30%;
+	
+	display: none;
+	opacity: 2;
+
+	margin: auto;	
+}
+
+
+/* Sidebar Starts Here */
+#editor_sidebar {
+	height: 100%;
+	float: left;
+	width: 20%;
+	background: #FAFAFA;
+	position: relative;
+	border-left: 2px solid #ddd;
+	min-height: 500px;
+}
+
+#editor_sidebar > #header {
+	_height: 100px;
+	width: 100%;
+}
+
+
+#editor_sidebar > #elements {
+	height: 75%;
+	width: 90%;
+	
+	margin: 10px auto;
+
+	_overflow-x: scroll;
+}
+
+#editor_sidebar > #elements > #heading {
+	font-family: "Oswald";
+	font-size: 18px;
+	text-align: center;
+	display: block;
+	width: 100%;
+	margin: 10px 0px 10px 0px;
+	color: #2986b9;
+}
+
+#editor_sidebar > #elements > .element_option {
+	height: 40px;
+	width: 100%;
+	margin: 0 auto;
+	float: left;
+	border-bottom: 1px #ddd solid;
+	line-height: 40px;
+	color: #fff;
+}
+
+#editor_sidebar > #elements > .element_option:last-child {
+	border: none;
+}
+
+#editor_sidebar > #elements > .element_option > #element_color {
+	height: 30px; width: 30px;
+
+	border-radius: 100%;
+	float: left;
+	margin: 5px;
+}
+
+#editor_sidebar > #elements > .element_option > #element_color input[type="checkbox"] {
+	height: 15px;
+	width: 15px;
+
+	margin: 7.5px;
+
+	border: none;
+}
+
+#editor_sidebar > #elements > .element_option > #element_name {
+	font-size: 18px;
+	font-family: "Oswald";
+}
+
+#editor_sidebar > #elements > #element_added {
+
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0);
+    border-left: 1px solid #ccc;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: #f0f0f0;
+}
+
+
+#editor_sidebar .divider {
+	height: 1px;
+	width: 90%;
+	margin:  0 auto;
+	background: #B1B1B1;
+}
+
+#editor_sidebar > #footer {
+	height: 80px;
+	width: 100%;
+	_background: #f0f0f0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
